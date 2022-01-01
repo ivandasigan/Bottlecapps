@@ -30,6 +30,10 @@
 		EAFDAD1227809A8A00CF80A2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDAD1127809A8A00CF80A2 /* RegisterViewController.swift */; };
 		EAFDAD1427809AAF00CF80A2 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDAD1327809AAF00CF80A2 /* DashboardViewController.swift */; };
 		EAFDAD1627809C1B00CF80A2 /* BrandAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDAD1527809C1B00CF80A2 /* BrandAPI.swift */; };
+		EAFDAD1E27809F9A00CF80A2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFDAD1D27809F9A00CF80A2 /* Login.storyboard */; };
+		EAFDAD202780A0DF00CF80A2 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFDAD1F2780A0DF00CF80A2 /* Register.storyboard */; };
+		EAFDAD222780A0F300CF80A2 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFDAD212780A0F300CF80A2 /* Dashboard.storyboard */; };
+		EAFDAD252780A24C00CF80A2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDAD242780A24C00CF80A2 /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,10 @@
 		EAFDAD1127809A8A00CF80A2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EAFDAD1327809AAF00CF80A2 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		EAFDAD1527809C1B00CF80A2 /* BrandAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandAPI.swift; sourceTree = "<group>"; };
+		EAFDAD1D27809F9A00CF80A2 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		EAFDAD1F2780A0DF00CF80A2 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		EAFDAD212780A0F300CF80A2 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		EAFDAD242780A24C00CF80A2 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +135,7 @@
 		EA12F026277DF4D1004F23F5 /* Bottlecapps */ = {
 			isa = PBXGroup;
 			children = (
+				EAFDAD232780A22E00CF80A2 /* DataManager */,
 				EAE90F11277DFAA100B0A329 /* APINetworkManager */,
 				EAE90F0F277DFA4200B0A329 /* Networking */,
 				EAE90F0E277DFA3800B0A329 /* Modules */,
@@ -236,7 +245,8 @@
 		EAFDAD0C27809A3500CF80A2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				EAFDAD0F27809A6900CF80A2 /* LoginViewController.swift */,
+				EAFDAD1827809F2500CF80A2 /* ViewModel */,
+				EAFDAD1727809F1900CF80A2 /* View */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -244,7 +254,8 @@
 		EAFDAD0D27809A4200CF80A2 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				EAFDAD1127809A8A00CF80A2 /* RegisterViewController.swift */,
+				EAFDAD1A27809F6D00CF80A2 /* ViewModel */,
+				EAFDAD1927809F6700CF80A2 /* View */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -252,9 +263,66 @@
 		EAFDAD0E27809A4F00CF80A2 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				EAFDAD1327809AAF00CF80A2 /* DashboardViewController.swift */,
+				EAFDAD1C27809F7B00CF80A2 /* ViewModel */,
+				EAFDAD1B27809F7600CF80A2 /* View */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		EAFDAD1727809F1900CF80A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDAD0F27809A6900CF80A2 /* LoginViewController.swift */,
+				EAFDAD1D27809F9A00CF80A2 /* Login.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAFDAD1827809F2500CF80A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAFDAD1927809F6700CF80A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDAD1127809A8A00CF80A2 /* RegisterViewController.swift */,
+				EAFDAD1F2780A0DF00CF80A2 /* Register.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAFDAD1A27809F6D00CF80A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAFDAD1B27809F7600CF80A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDAD1327809AAF00CF80A2 /* DashboardViewController.swift */,
+				EAFDAD212780A0F300CF80A2 /* Dashboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAFDAD1C27809F7B00CF80A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAFDAD232780A22E00CF80A2 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDAD242780A24C00CF80A2 /* Token.swift */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,9 +429,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFDAD1E27809F9A00CF80A2 /* Login.storyboard in Resources */,
+				EAFDAD222780A0F300CF80A2 /* Dashboard.storyboard in Resources */,
 				EA12F034277DF4D6004F23F5 /* LaunchScreen.storyboard in Resources */,
 				EA12F031277DF4D6004F23F5 /* Assets.xcassets in Resources */,
 				EA12F02F277DF4D1004F23F5 /* Main.storyboard in Resources */,
+				EAFDAD202780A0DF00CF80A2 /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +468,7 @@
 				EAE90F16277E026300B0A329 /* HTTPTask.swift in Sources */,
 				EAFDAD1227809A8A00CF80A2 /* RegisterViewController.swift in Sources */,
 				EA646437277F3D1500351CEE /* BeerAPI.swift in Sources */,
+				EAFDAD252780A24C00CF80A2 /* Token.swift in Sources */,
 				EAE90F18277E026D00B0A329 /* HTTPMethod.swift in Sources */,
 				EA646439277FD72D00351CEE /* Beer.swift in Sources */,
 				EAFDAD0A278098D900CF80A2 /* Brand.swift in Sources */,
