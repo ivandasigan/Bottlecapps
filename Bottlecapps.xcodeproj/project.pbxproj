@@ -25,6 +25,7 @@
 		EAE90F16277E026300B0A329 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F15277E026300B0A329 /* HTTPTask.swift */; };
 		EAE90F18277E026D00B0A329 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F17277E026D00B0A329 /* HTTPMethod.swift */; };
 		EAE90F1A277E03C500B0A329 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F19277E03C500B0A329 /* ParameterEncoder.swift */; };
+		EAFDAD0A278098D900CF80A2 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDAD09278098D900CF80A2 /* Brand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		EAE90F15277E026300B0A329 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		EAE90F17277E026D00B0A329 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		EAE90F19277E03C500B0A329 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		EAFDAD09278098D900CF80A2 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				EA646438277FD72D00351CEE /* Beer.swift */,
+				EAFDAD09278098D900CF80A2 /* Brand.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				EA646437277F3D1500351CEE /* BeerAPI.swift in Sources */,
 				EAE90F18277E026D00B0A329 /* HTTPMethod.swift in Sources */,
 				EA646439277FD72D00351CEE /* Beer.swift in Sources */,
+				EAFDAD0A278098D900CF80A2 /* Brand.swift in Sources */,
 				EA646433277EED7200351CEE /* JSONParameterEncoder.swift in Sources */,
 				EA12F02C277DF4D1004F23F5 /* ViewController.swift in Sources */,
 				EA12F028277DF4D1004F23F5 /* AppDelegate.swift in Sources */,

@@ -17,4 +17,5 @@ struct Beer : Codable {
     var srp: String
     var stock: Int
     var ratings: String
+    
 }
