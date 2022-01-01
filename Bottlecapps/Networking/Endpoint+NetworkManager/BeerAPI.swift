@@ -14,7 +14,7 @@ enum BeerAPI {
 
 extension BeerAPI: EndPointType {
     var baseUrl: URL {
-        return URL(string: "")!
+        return URL(string: "http://127.0.0.1:8000/api/v1")!
     }
     
     var path: String {
@@ -41,4 +41,20 @@ extension BeerAPI: EndPointType {
     var header: HTTPHeaders {
         return ["Content-Type":"application/json"]
     }
+}
+
+
+
+struct BeerNetworkManager {
+    
+    var beerRoute = Router<BeerAPI>()
+    
+    func getAllBeers(completion: @escaping(Result<>)) {
+        beerRoute.request(.getAllBeers) { data, response, error in
+            do {
+                
+            }
+        }
+    }
+    
 }
