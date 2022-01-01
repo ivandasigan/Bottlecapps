@@ -26,6 +26,10 @@
 		EAE90F18277E026D00B0A329 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F17277E026D00B0A329 /* HTTPMethod.swift */; };
 		EAE90F1A277E03C500B0A329 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F19277E03C500B0A329 /* ParameterEncoder.swift */; };
 		EAFDAD0A278098D900CF80A2 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDAD09278098D900CF80A2 /* Brand.swift */; };
+		EAFDAD1027809A6900CF80A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDAD0F27809A6900CF80A2 /* LoginViewController.swift */; };
+		EAFDAD1227809A8A00CF80A2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDAD1127809A8A00CF80A2 /* RegisterViewController.swift */; };
+		EAFDAD1427809AAF00CF80A2 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDAD1327809AAF00CF80A2 /* DashboardViewController.swift */; };
+		EAFDAD1627809C1B00CF80A2 /* BrandAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDAD1527809C1B00CF80A2 /* BrandAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		EAE90F17277E026D00B0A329 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		EAE90F19277E03C500B0A329 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		EAFDAD09278098D900CF80A2 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		EAFDAD0F27809A6900CF80A2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EAFDAD1127809A8A00CF80A2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		EAFDAD1327809AAF00CF80A2 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		EAFDAD1527809C1B00CF80A2 /* BrandAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +127,12 @@
 		EA12F026277DF4D1004F23F5 /* Bottlecapps */ = {
 			isa = PBXGroup;
 			children = (
+				EAE90F11277DFAA100B0A329 /* APINetworkManager */,
 				EAE90F0F277DFA4200B0A329 /* Networking */,
 				EAE90F0E277DFA3800B0A329 /* Modules */,
 				EAE90F0D277DFA1500B0A329 /* ViewModel */,
 				EAE90F0C277DFA0500B0A329 /* Model */,
-				EA12F027277DF4D1004F23F5 /* AppDelegate.swift */,
-				EA12F029277DF4D1004F23F5 /* SceneDelegate.swift */,
+				EAFDAD0B27809A2300CF80A2 /* App Delegates */,
 				EA12F02B277DF4D1004F23F5 /* ViewController.swift */,
 				EA12F02D277DF4D1004F23F5 /* Main.storyboard */,
 				EA12F030277DF4D6004F23F5 /* Assets.xcassets */,
@@ -170,6 +178,9 @@
 		EAE90F0E277DFA3800B0A329 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EAFDAD0E27809A4F00CF80A2 /* Dashboard */,
+				EAFDAD0D27809A4200CF80A2 /* Register */,
+				EAFDAD0C27809A3500CF80A2 /* Login */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -178,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				EAE90F12277DFABE00B0A329 /* Encoding */,
-				EAE90F11277DFAA100B0A329 /* Endpoint+NetworkManager */,
 				EAE90F10277DFA9A00B0A329 /* Service */,
 			);
 			path = Networking;
@@ -195,12 +205,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		EAE90F11277DFAA100B0A329 /* Endpoint+NetworkManager */ = {
+		EAE90F11277DFAA100B0A329 /* APINetworkManager */ = {
 			isa = PBXGroup;
 			children = (
 				EA646436277F3D1500351CEE /* BeerAPI.swift */,
+				EAFDAD1527809C1B00CF80A2 /* BrandAPI.swift */,
 			);
-			path = "Endpoint+NetworkManager";
+			path = APINetworkManager;
 			sourceTree = "<group>";
 		};
 		EAE90F12277DFABE00B0A329 /* Encoding */ = {
@@ -211,6 +222,39 @@
 				EA646432277EED7200351CEE /* JSONParameterEncoder.swift */,
 			);
 			path = Encoding;
+			sourceTree = "<group>";
+		};
+		EAFDAD0B27809A2300CF80A2 /* App Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				EA12F027277DF4D1004F23F5 /* AppDelegate.swift */,
+				EA12F029277DF4D1004F23F5 /* SceneDelegate.swift */,
+			);
+			path = "App Delegates";
+			sourceTree = "<group>";
+		};
+		EAFDAD0C27809A3500CF80A2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDAD0F27809A6900CF80A2 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EAFDAD0D27809A4200CF80A2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDAD1127809A8A00CF80A2 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		EAFDAD0E27809A4F00CF80A2 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDAD1327809AAF00CF80A2 /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,11 +388,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFDAD1027809A6900CF80A2 /* LoginViewController.swift in Sources */,
 				EA646431277EE44F00351CEE /* URLParameterEncoder.swift in Sources */,
 				EAE90F1A277E03C500B0A329 /* ParameterEncoder.swift in Sources */,
 				EA646435277EF19D00351CEE /* Router.swift in Sources */,
 				EAE90F14277E017900B0A329 /* EndPointType.swift in Sources */,
+				EAFDAD1627809C1B00CF80A2 /* BrandAPI.swift in Sources */,
 				EAE90F16277E026300B0A329 /* HTTPTask.swift in Sources */,
+				EAFDAD1227809A8A00CF80A2 /* RegisterViewController.swift in Sources */,
 				EA646437277F3D1500351CEE /* BeerAPI.swift in Sources */,
 				EAE90F18277E026D00B0A329 /* HTTPMethod.swift in Sources */,
 				EA646439277FD72D00351CEE /* Beer.swift in Sources */,
@@ -357,6 +404,7 @@
 				EA12F02C277DF4D1004F23F5 /* ViewController.swift in Sources */,
 				EA12F028277DF4D1004F23F5 /* AppDelegate.swift in Sources */,
 				EA12F02A277DF4D1004F23F5 /* SceneDelegate.swift in Sources */,
+				EAFDAD1427809AAF00CF80A2 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

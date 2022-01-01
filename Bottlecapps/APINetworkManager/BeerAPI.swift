@@ -49,10 +49,12 @@ struct BeerNetworkManager {
     
     var beerRoute = Router<BeerAPI>()
     
-    func getAllBeers(completion: @escaping(Result<>)) {
+    func getAllBeersByBrand(brand: Brand, completion: @escaping(Result<[Beer], Error>) -> ()) {
         beerRoute.request(.getAllBeers) { data, response, error in
             do {
                 
+            } catch let error as NSError {
+                completion(.failure(error))
             }
         }
     }
