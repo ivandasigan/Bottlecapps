@@ -38,6 +38,14 @@ class LoginViewController: UIViewController {
         
     }
     
+    
+    private func updateUI() {
+        userViewModel.bindVMToVC = {
+            // Update data source
+            print(self.userViewModel.userData)
+        }
+    }
+    
     private func addButtonActionAndConfiguration() {
         loginButton.addTarget(self, action: #selector(self.loginAction), for: .touchUpInside)
         createAccountButton.addTarget(self, action: #selector(self.createAccountAction), for: .touchUpInside)

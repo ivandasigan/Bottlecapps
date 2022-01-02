@@ -31,7 +31,7 @@ extension UserAPI : EndPointType {
     var task: HTTPTask {
         switch self {
         case .login(let user), .register(let user):
-            return .requestWithParameters(bodyParameter: ["username":user.username, "password":user.password], bodyEncoding: .urlAndJsonEncoding, urlParameter: [:])
+            return .requestWithParameters(bodyParameter: ["username":user.username, "password":user.password], bodyEncoding: .jsonEncoding, urlParameter: [:])
         }
     }
     
@@ -50,7 +50,7 @@ extension UserAPI : EndPointType {
 struct UserNetworkManager {
     
     var userRouter : Router<UserAPI>
-    var user: User
+
     init() {
         self.userRouter = Router<UserAPI>()
     }
