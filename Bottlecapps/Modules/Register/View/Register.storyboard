@@ -1,25 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="RegisterViewController" customModule="Bottlecapps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="3I9-DL-h3E">
+                                <rect key="frame" x="50" y="387" width="314" height="203"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="5fL-fD-15n">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="86"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kek-Wu-UBh">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="25"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52L-W7-Vsu">
+                                                <rect key="frame" x="0.0" y="52" width="314" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="VHY-GZ-4Yq">
+                                        <rect key="frame" x="0.0" y="117" width="314" height="86"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bif-Lh-fZJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="25"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Lk-DI-1Lp">
+                                                <rect key="frame" x="0.0" y="52" width="314" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQd-86-noq">
+                                <rect key="frame" x="50" y="667" width="314" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Register"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yi9-U0-iOs">
+                                <rect key="frame" x="177.5" y="831" width="59.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OrS-yD-Hia">
+                                <rect key="frame" x="133" y="193" width="148" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="Y6H-1L-33M"/>
+                                    <constraint firstAttribute="height" constant="148" id="aB0-hS-nnQ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yi9-U0-iOs" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="7t8-L1-GUs"/>
+                            <constraint firstItem="VQd-86-noq" firstAttribute="leading" secondItem="3I9-DL-h3E" secondAttribute="leading" id="9yY-aK-VCm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="yi9-U0-iOs" secondAttribute="bottom" id="BSQ-pK-WcI"/>
+                            <constraint firstItem="3I9-DL-h3E" firstAttribute="centerX" secondItem="OrS-yD-Hia" secondAttribute="centerX" id="Bkt-SE-bIk"/>
+                            <constraint firstItem="OrS-yD-Hia" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Idr-Q8-tG8"/>
+                            <constraint firstItem="VQd-86-noq" firstAttribute="trailing" secondItem="3I9-DL-h3E" secondAttribute="trailing" id="QRv-bU-Q1d"/>
+                            <constraint firstItem="VQd-86-noq" firstAttribute="top" secondItem="3I9-DL-h3E" secondAttribute="bottom" constant="77" id="UFU-CF-dbq"/>
+                            <constraint firstItem="VQd-86-noq" firstAttribute="centerX" secondItem="3I9-DL-h3E" secondAttribute="centerX" id="eGL-Zf-dEm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3I9-DL-h3E" secondAttribute="trailing" constant="50" id="egT-uf-95j"/>
+                            <constraint firstItem="3I9-DL-h3E" firstAttribute="top" secondItem="OrS-yD-Hia" secondAttribute="bottom" constant="46" id="nd6-a0-eVt"/>
+                            <constraint firstItem="3I9-DL-h3E" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="sjz-9L-8fb"/>
+                            <constraint firstItem="OrS-yD-Hia" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="149" id="vnE-un-jA7"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="30" y="50"/>
         </scene>
     </scenes>
     <resources>

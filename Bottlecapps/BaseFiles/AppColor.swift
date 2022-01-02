@@ -18,6 +18,9 @@ struct AppColor {
     static var textColor: UIColor {
         return UIColor().colorWithHexString(hex: "#2E2E2E")
     }
+    static var underlineColor: UIColor {
+        return UIColor().colorWithHexString(hex: "#707070")
+    }
 }
 
 

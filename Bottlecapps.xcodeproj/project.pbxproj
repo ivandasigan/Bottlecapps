@@ -23,6 +23,11 @@
 		EA646439277FD72D00351CEE /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA646438277FD72D00351CEE /* Beer.swift */; };
 		EA7035732781B0C500739F29 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7035722781B0C500739F29 /* AppColor.swift */; };
 		EA7035762781B15100739F29 /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7035752781B15100739F29 /* UIColor+HexString.swift */; };
+		EA7035782781CEDC00739F29 /* AppLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7035772781CEDC00739F29 /* AppLoader.swift */; };
+		EA70357A2781D01000739F29 /* UIViewController+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7035792781D01000739F29 /* UIViewController+Loader.swift */; };
+		EA70357C2781D15A00739F29 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70357B2781D15A00739F29 /* UserAPI.swift */; };
+		EA70357E2781D26200739F29 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70357D2781D26200739F29 /* User.swift */; };
+		EA7035802781D40300739F29 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70357F2781D40300739F29 /* UserViewModel.swift */; };
 		EAE90F14277E017900B0A329 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F13277E017900B0A329 /* EndPointType.swift */; };
 		EAE90F16277E026300B0A329 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F15277E026300B0A329 /* HTTPTask.swift */; };
 		EAE90F18277E026D00B0A329 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F17277E026D00B0A329 /* HTTPMethod.swift */; };
@@ -76,6 +81,11 @@
 		EA646438277FD72D00351CEE /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		EA7035722781B0C500739F29 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		EA7035752781B15100739F29 /* UIColor+HexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
+		EA7035772781CEDC00739F29 /* AppLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoader.swift; sourceTree = "<group>"; };
+		EA7035792781D01000739F29 /* UIViewController+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loader.swift"; sourceTree = "<group>"; };
+		EA70357B2781D15A00739F29 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		EA70357D2781D26200739F29 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EA70357F2781D40300739F29 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		EAE90F13277E017900B0A329 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		EAE90F15277E026300B0A329 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		EAE90F17277E026D00B0A329 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -145,7 +155,6 @@
 				EAE90F11277DFAA100B0A329 /* APINetworkManager */,
 				EAE90F0F277DFA4200B0A329 /* Networking */,
 				EAE90F0E277DFA3800B0A329 /* Modules */,
-				EAE90F0D277DFA1500B0A329 /* ViewModel */,
 				EAE90F0C277DFA0500B0A329 /* Model */,
 				EAFDAD0B27809A2300CF80A2 /* App Delegates */,
 				EA12F02B277DF4D1004F23F5 /* ViewController.swift */,
@@ -178,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				EA7035722781B0C500739F29 /* AppColor.swift */,
+				EA7035772781CEDC00739F29 /* AppLoader.swift */,
 			);
 			path = BaseFiles;
 			sourceTree = "<group>";
@@ -186,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				EA7035752781B15100739F29 /* UIColor+HexString.swift */,
+				EA7035792781D01000739F29 /* UIViewController+Loader.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -195,15 +206,9 @@
 			children = (
 				EA646438277FD72D00351CEE /* Beer.swift */,
 				EAFDAD09278098D900CF80A2 /* Brand.swift */,
+				EA70357D2781D26200739F29 /* User.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		EAE90F0D277DFA1500B0A329 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EAE90F0E277DFA3800B0A329 /* Modules */ = {
@@ -241,6 +246,7 @@
 			children = (
 				EA646436277F3D1500351CEE /* BeerAPI.swift */,
 				EAFDAD1527809C1B00CF80A2 /* BrandAPI.swift */,
+				EA70357B2781D15A00739F29 /* UserAPI.swift */,
 			);
 			path = APINetworkManager;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 		EAFDAD1C27809F7B00CF80A2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EA70357F2781D40300739F29 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -484,9 +491,12 @@
 				EAFDAD1027809A6900CF80A2 /* LoginViewController.swift in Sources */,
 				EA646431277EE44F00351CEE /* URLParameterEncoder.swift in Sources */,
 				EAE90F1A277E03C500B0A329 /* ParameterEncoder.swift in Sources */,
+				EA70357C2781D15A00739F29 /* UserAPI.swift in Sources */,
 				EA646435277EF19D00351CEE /* Router.swift in Sources */,
 				EAE90F14277E017900B0A329 /* EndPointType.swift in Sources */,
 				EAFDAD1627809C1B00CF80A2 /* BrandAPI.swift in Sources */,
+				EA7035782781CEDC00739F29 /* AppLoader.swift in Sources */,
+				EA70357A2781D01000739F29 /* UIViewController+Loader.swift in Sources */,
 				EAE90F16277E026300B0A329 /* HTTPTask.swift in Sources */,
 				EAFDAD1227809A8A00CF80A2 /* RegisterViewController.swift in Sources */,
 				EA646437277F3D1500351CEE /* BeerAPI.swift in Sources */,
@@ -498,8 +508,10 @@
 				EA646433277EED7200351CEE /* JSONParameterEncoder.swift in Sources */,
 				EA12F02C277DF4D1004F23F5 /* ViewController.swift in Sources */,
 				EA12F028277DF4D1004F23F5 /* AppDelegate.swift in Sources */,
+				EA70357E2781D26200739F29 /* User.swift in Sources */,
 				EA12F02A277DF4D1004F23F5 /* SceneDelegate.swift in Sources */,
 				EA7035762781B15100739F29 /* UIColor+HexString.swift in Sources */,
+				EA7035802781D40300739F29 /* UserViewModel.swift in Sources */,
 				EAFDAD1427809AAF00CF80A2 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
