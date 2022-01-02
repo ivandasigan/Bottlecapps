@@ -21,6 +21,8 @@
 		EA646435277EF19D00351CEE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA646434277EF19D00351CEE /* Router.swift */; };
 		EA646437277F3D1500351CEE /* BeerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA646436277F3D1500351CEE /* BeerAPI.swift */; };
 		EA646439277FD72D00351CEE /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA646438277FD72D00351CEE /* Beer.swift */; };
+		EA7035732781B0C500739F29 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7035722781B0C500739F29 /* AppColor.swift */; };
+		EA7035762781B15100739F29 /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7035752781B15100739F29 /* UIColor+HexString.swift */; };
 		EAE90F14277E017900B0A329 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F13277E017900B0A329 /* EndPointType.swift */; };
 		EAE90F16277E026300B0A329 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F15277E026300B0A329 /* HTTPTask.swift */; };
 		EAE90F18277E026D00B0A329 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F17277E026D00B0A329 /* HTTPMethod.swift */; };
@@ -72,6 +74,8 @@
 		EA646434277EF19D00351CEE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		EA646436277F3D1500351CEE /* BeerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerAPI.swift; sourceTree = "<group>"; };
 		EA646438277FD72D00351CEE /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		EA7035722781B0C500739F29 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		EA7035752781B15100739F29 /* UIColor+HexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
 		EAE90F13277E017900B0A329 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		EAE90F15277E026300B0A329 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		EAE90F17277E026D00B0A329 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 		EA12F026277DF4D1004F23F5 /* Bottlecapps */ = {
 			isa = PBXGroup;
 			children = (
+				EA7035742781B13500739F29 /* Extensions */,
+				EA7035712781B0B700739F29 /* BaseFiles */,
 				EAFDAD232780A22E00CF80A2 /* DataManager */,
 				EAE90F11277DFAA100B0A329 /* APINetworkManager */,
 				EAE90F0F277DFA4200B0A329 /* Networking */,
@@ -166,6 +172,22 @@
 				EA12F04A277DF4D6004F23F5 /* BottlecappsUITestsLaunchTests.swift */,
 			);
 			path = BottlecappsUITests;
+			sourceTree = "<group>";
+		};
+		EA7035712781B0B700739F29 /* BaseFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EA7035722781B0C500739F29 /* AppColor.swift */,
+			);
+			path = BaseFiles;
+			sourceTree = "<group>";
+		};
+		EA7035742781B13500739F29 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA7035752781B15100739F29 /* UIColor+HexString.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		EAE90F0C277DFA0500B0A329 /* Model */ = {
@@ -470,12 +492,14 @@
 				EA646437277F3D1500351CEE /* BeerAPI.swift in Sources */,
 				EAFDAD252780A24C00CF80A2 /* Token.swift in Sources */,
 				EAE90F18277E026D00B0A329 /* HTTPMethod.swift in Sources */,
+				EA7035732781B0C500739F29 /* AppColor.swift in Sources */,
 				EA646439277FD72D00351CEE /* Beer.swift in Sources */,
 				EAFDAD0A278098D900CF80A2 /* Brand.swift in Sources */,
 				EA646433277EED7200351CEE /* JSONParameterEncoder.swift in Sources */,
 				EA12F02C277DF4D1004F23F5 /* ViewController.swift in Sources */,
 				EA12F028277DF4D1004F23F5 /* AppDelegate.swift in Sources */,
 				EA12F02A277DF4D1004F23F5 /* SceneDelegate.swift in Sources */,
+				EA7035762781B15100739F29 /* UIColor+HexString.swift in Sources */,
 				EAFDAD1427809AAF00CF80A2 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
