@@ -21,15 +21,16 @@ class RegisterViewController: UIViewController {
     }
  
     var userViewModel: UserViewModel!
-    
+    var appLoader : AppLoader!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         userViewModel = UserViewModel()
-        
+        appLoader = AppLoader(superView: self.view)
         self.view.backgroundColor = AppColor.landingPageColor
         addButtonActionAndConfigurations()
         configureTextFields()
+        updateUI()
     }
     
 
@@ -57,9 +58,26 @@ class RegisterViewController: UIViewController {
     
     //MARK: - OBJC ACTION BUTTON
     @objc func registerAction() {
+        appLoader.startLoader()
         if let usernameText = usernameTextField.text, let passwordText = passwordTextField.text {
             let newUser = User(status: 0, payload: Payload(username: usernameText, password: passwordText), token: "", message: "")
-            userViewModel.registerNewUser(user: newUser)
+            userViewModel.registerNewUser(user: newUser) { [weak self] done in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    if done {
+                        self.appLoader.stopLoader()
+                    } else {
+                        
+                    }
+                }
+            }
+            
+        }
+    }
+    func updateUI() {
+        userViewModel.bindVMToVC = {
+            print(self.userViewModel.userData)
+          
         }
     }
     @objc func loginAction() {

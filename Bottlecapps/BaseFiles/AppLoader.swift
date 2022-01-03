@@ -26,10 +26,12 @@ struct AppLoader {
     }
     
     func startLoader() {
+        self.superView.isUserInteractionEnabled = false
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
     }
     func stopLoader() {
+        self.superView.isUserInteractionEnabled = true
         activityIndicator.stopAnimating()
     }
 }

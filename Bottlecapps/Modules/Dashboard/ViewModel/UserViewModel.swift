@@ -7,6 +7,8 @@
 
 import Foundation
 
+public typealias ResultCompletion = (Bool) -> ()
+
 class UserViewModel: NSObject {
     
     
@@ -21,27 +23,31 @@ class UserViewModel: NSObject {
     override init() {
         super.init()
         self.userNetworkManager = UserNetworkManager()
-        
     }
     
-    func loginUser(user: User) {
+    func loginUser(user: User, completion: @escaping ResultCompletion) {
         userNetworkManager.loginRequest(user: user) { result in
             switch result {
             case .success(let user):
                 self.userData = user
+                completion(true)
             case .failure(let error):
                 print("VM ERR \(error.localizedDescription)")
+                completion(false)
             }
         }
     }
     
-    func registerNewUser(user: User) {
+    func registerNewUser(user: User, completion: @escaping ResultCompletion) {
         userNetworkManager.registerRequest(user: user) { result in
             switch result {
             case .success(let user):
                 self.userData = user
+                completion(true)
             case .failure(let error):
+             
                 print("VM ERR \(error.localizedDescription)")
+                completion(false)
             }
         }
     }

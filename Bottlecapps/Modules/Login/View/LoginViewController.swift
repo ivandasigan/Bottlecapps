@@ -37,19 +37,11 @@ class LoginViewController: UIViewController {
         self.view.backgroundColor = AppColor.landingPageColor
         addButtonActionAndConfigurations()
         configureTextFields()
-        
-        userViewModel.registerNewUser(user: User(status: 0, payload: Payload(username: "Ivan", password: "pass123"), token: "", message: ""))
-        updaetUI()
+        updateUI()
     }
-    
-    func updaetUI() {
-        userViewModel.bindVMToVC =  {
-            print("USER \(self.userViewModel.userData)")
-        }
-    }
+
     private func addButtonActionAndConfigurations() {
         
-
         loginButton.tintColor = AppColor.landingPageColor
         createAccountButton.tintColor = .white
         
@@ -61,21 +53,40 @@ class LoginViewController: UIViewController {
     }
     
     private func configureTextFields() {
-        usernameTextField.borderStyle = .none
-        passwordTextField.borderStyle = .none
-        usernameTextField.textColor = .white
-        passwordTextField.textColor = .white
+        usernameTextField.setStyleAndColor()
+        passwordTextField.setStyleAndColor()
+  
         usernameTextField.addUnderline()
         passwordTextField.addUnderline()
     }
     
+    func updateUI() {
+        userViewModel.bindVMToVC = {
+            print(self.userViewModel.userData)
+        }
+    }
+    
     //MARK: - OBJC ACTION BUTTON
     @objc func loginAction() {
-        let viewController = Modules.Register.initialViewController
-        
-        present(viewController, animated: true, completion: nil)
+        appLoader.startLoader()
+        if let usernameText = usernameTextField.text, let passwordText = passwordTextField.text {
+            let user = User(status: 0, payload: Payload(username: usernameText, password: passwordText), token: "", message: "")
+            userViewModel.loginUser(user: user) { [weak self] done in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    if done {
+                        self.appLoader.stopLoader()
+                    } else {
+                        
+                    }
+                }
+            }
+            
+        }
+  
     }
     @objc func createAccountAction() {
-        
+        let viewController = Modules.Register.initialViewController
+        present(viewController, animated: true, completion: nil)
     }
 }

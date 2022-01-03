@@ -10,6 +10,14 @@ import UIKit
 
 
 extension UITextField {
+    
+    func setStyleAndColor() {
+        self.borderStyle = .none
+        self.textColor = .white
+        
+    
+    }
+    
     func addUnderline() {
        
         let height = self.frame.size.height
