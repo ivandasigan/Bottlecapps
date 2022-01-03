@@ -10,7 +10,7 @@ import UIKit
 class BrandViewController: UIViewController {
 
     @IBOutlet weak var brandCollectionView: UICollectionView!
-    var dummy = ["Brandy","Mixer","Brandy","Mixer","Brandy","Mixer"]
+    var dummy = ["Brandy","Mixer","Brandy","Mixer","Brandy","Mixer","Mixer","Brandy","Mixer","Mixer","Brandy","Mixer","Brandy","Mixer","Mixer","Brandy","Mixer"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +20,11 @@ class BrandViewController: UIViewController {
         brandCollectionView.delegate = self
         brandCollectionView.dataSource = self
         
-        
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 80, height: 65)
+        layout.scrollDirection = .horizontal
+        brandCollectionView.collectionViewLayout = layout
+        brandCollectionView.showsHorizontalScrollIndicator = false
     }
 }
 
@@ -38,6 +42,6 @@ extension BrandViewController: UICollectionViewDataSource,
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 120, height: 50)
+        return CGSize(width: 120, height: 65)
     }
 }

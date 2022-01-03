@@ -32,6 +32,8 @@
 		EAB8F6ED2783114700137237 /* BeersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8F6EC2783114700137237 /* BeersViewController.swift */; };
 		EAB8F6F02783214500137237 /* BrandCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8F6EF2783214500137237 /* BrandCollectionViewCell.swift */; };
 		EAB8F6F22783234000137237 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8F6F12783234000137237 /* BeerCollectionViewCell.swift */; };
+		EAB8F6F52783477B00137237 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8F6F42783477B00137237 /* DetailsViewController.swift */; };
+		EAB8F6F9278347BA00137237 /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB8F6F8278347B900137237 /* Details.storyboard */; };
 		EAE90F14277E017900B0A329 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F13277E017900B0A329 /* EndPointType.swift */; };
 		EAE90F16277E026300B0A329 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F15277E026300B0A329 /* HTTPTask.swift */; };
 		EAE90F18277E026D00B0A329 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F17277E026D00B0A329 /* HTTPMethod.swift */; };
@@ -95,6 +97,8 @@
 		EAB8F6EC2783114700137237 /* BeersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersViewController.swift; sourceTree = "<group>"; };
 		EAB8F6EF2783214500137237 /* BrandCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCollectionViewCell.swift; sourceTree = "<group>"; };
 		EAB8F6F12783234000137237 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
+		EAB8F6F42783477B00137237 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		EAB8F6F8278347B900137237 /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
 		EAE90F13277E017900B0A329 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		EAE90F15277E026300B0A329 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		EAE90F17277E026D00B0A329 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -220,6 +224,31 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		EAB8F6F32783476700137237 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				EAB8F6F72783478F00137237 /* ViewModel */,
+				EAB8F6F62783478800137237 /* View */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		EAB8F6F62783478800137237 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAB8F6F42783477B00137237 /* DetailsViewController.swift */,
+				EAB8F6F8278347B900137237 /* Details.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAB8F6F72783478F00137237 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EAE90F0C277DFA0500B0A329 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +262,7 @@
 		EAE90F0E277DFA3800B0A329 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EAB8F6F32783476700137237 /* Details */,
 				EAFDAD0E27809A4F00CF80A2 /* Dashboard */,
 				EAFDAD0D27809A4200CF80A2 /* Register */,
 				EAFDAD0C27809A3500CF80A2 /* Login */,
@@ -482,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAFDAD1E27809F9A00CF80A2 /* Login.storyboard in Resources */,
+				EAB8F6F9278347BA00137237 /* Details.storyboard in Resources */,
 				EAFDAD222780A0F300CF80A2 /* Dashboard.storyboard in Resources */,
 				EA12F034277DF4D6004F23F5 /* LaunchScreen.storyboard in Resources */,
 				EA12F031277DF4D6004F23F5 /* Assets.xcassets in Resources */,
@@ -533,6 +564,7 @@
 				EA646439277FD72D00351CEE /* Beer.swift in Sources */,
 				EAFDAD0A278098D900CF80A2 /* Brand.swift in Sources */,
 				EAB8F6EB2783113500137237 /* BrandViewController.swift in Sources */,
+				EAB8F6F52783477B00137237 /* DetailsViewController.swift in Sources */,
 				EA646433277EED7200351CEE /* JSONParameterEncoder.swift in Sources */,
 				EA12F02C277DF4D1004F23F5 /* ViewController.swift in Sources */,
 				EA12F028277DF4D1004F23F5 /* AppDelegate.swift in Sources */,

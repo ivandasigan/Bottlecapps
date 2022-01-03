@@ -18,14 +18,25 @@ class BeersViewController: UIViewController {
         Beer(id: 5, name: "Brandy Coffe", size: "120ml", srp: "20.0", stock: 10, ratings: "4.1"),
         Beer(id: 6, name: "Brandy Coffe", size: "120ml", srp: "20.0", stock: 10, ratings: "4.1"),
     ]
+    
+    var width: CGFloat = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
     
     }
+    
     private func configureCollectionView() {
         beersCollectionView.delegate = self
         beersCollectionView.dataSource = self
+        
+        width = (beersCollectionView.frame.width / 2) - 30
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: width, height: 200)
+        layout.scrollDirection = .vertical
+        beersCollectionView.collectionViewLayout = layout
+        beersCollectionView.showsVerticalScrollIndicator = false
     }
 }
 
@@ -44,7 +55,7 @@ extension BeersViewController: UICollectionViewDelegate,
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 200)
+        return CGSize(width: width, height: 200)
     }
     
 }

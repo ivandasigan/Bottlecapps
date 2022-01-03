@@ -53,6 +53,7 @@ class LoginViewController: UIViewController {
     }
     
     private func configureTextFields() {
+        usernameTextField.becomeFirstResponder()
         usernameTextField.setStyleAndColor()
         passwordTextField.setStyleAndColor()
   
@@ -76,6 +77,8 @@ class LoginViewController: UIViewController {
                 DispatchQueue.main.async {
                     if done {
                         self.appLoader.stopLoader()
+                        let viewController = Modules.Dashboard.initialViewController
+                        self.present(viewController, animated: true, completion: nil)
                     } else {
                         
                     }
