@@ -28,6 +28,10 @@
 		EA70357C2781D15A00739F29 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70357B2781D15A00739F29 /* UserAPI.swift */; };
 		EA70357E2781D26200739F29 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70357D2781D26200739F29 /* User.swift */; };
 		EA7035802781D40300739F29 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70357F2781D40300739F29 /* UserViewModel.swift */; };
+		EAB8F6EB2783113500137237 /* BrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8F6EA2783113500137237 /* BrandViewController.swift */; };
+		EAB8F6ED2783114700137237 /* BeersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8F6EC2783114700137237 /* BeersViewController.swift */; };
+		EAB8F6F02783214500137237 /* BrandCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8F6EF2783214500137237 /* BrandCollectionViewCell.swift */; };
+		EAB8F6F22783234000137237 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB8F6F12783234000137237 /* BeerCollectionViewCell.swift */; };
 		EAE90F14277E017900B0A329 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F13277E017900B0A329 /* EndPointType.swift */; };
 		EAE90F16277E026300B0A329 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F15277E026300B0A329 /* HTTPTask.swift */; };
 		EAE90F18277E026D00B0A329 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F17277E026D00B0A329 /* HTTPMethod.swift */; };
@@ -87,6 +91,10 @@
 		EA70357B2781D15A00739F29 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		EA70357D2781D26200739F29 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EA70357F2781D40300739F29 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		EAB8F6EA2783113500137237 /* BrandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewController.swift; sourceTree = "<group>"; };
+		EAB8F6EC2783114700137237 /* BeersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersViewController.swift; sourceTree = "<group>"; };
+		EAB8F6EF2783214500137237 /* BrandCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCollectionViewCell.swift; sourceTree = "<group>"; };
+		EAB8F6F12783234000137237 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		EAE90F13277E017900B0A329 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		EAE90F15277E026300B0A329 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		EAE90F17277E026D00B0A329 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -201,6 +209,15 @@
 				EAFC12292782BECB00623667 /* UITextField+UnderlineLayer.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EAB8F6EE278314DC00137237 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EAB8F6EF2783214500137237 /* BrandCollectionViewCell.swift */,
+				EAB8F6F12783234000137237 /* BeerCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		EAE90F0C277DFA0500B0A329 /* Model */ = {
@@ -343,8 +360,11 @@
 		EAFDAD1B27809F7600CF80A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EAB8F6EE278314DC00137237 /* Cell */,
 				EAFDAD1327809AAF00CF80A2 /* DashboardViewController.swift */,
 				EAFDAD212780A0F300CF80A2 /* Dashboard.storyboard */,
+				EAB8F6EA2783113500137237 /* BrandViewController.swift */,
+				EAB8F6EC2783114700137237 /* BeersViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -491,6 +511,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB8F6ED2783114700137237 /* BeersViewController.swift in Sources */,
+				EAB8F6F02783214500137237 /* BrandCollectionViewCell.swift in Sources */,
+				EAB8F6F22783234000137237 /* BeerCollectionViewCell.swift in Sources */,
 				EAFDAD1027809A6900CF80A2 /* LoginViewController.swift in Sources */,
 				EAFC122D2782D51400623667 /* Modules.swift in Sources */,
 				EA646431277EE44F00351CEE /* URLParameterEncoder.swift in Sources */,
@@ -509,6 +532,7 @@
 				EA7035732781B0C500739F29 /* AppColor.swift in Sources */,
 				EA646439277FD72D00351CEE /* Beer.swift in Sources */,
 				EAFDAD0A278098D900CF80A2 /* Brand.swift in Sources */,
+				EAB8F6EB2783113500137237 /* BrandViewController.swift in Sources */,
 				EA646433277EED7200351CEE /* JSONParameterEncoder.swift in Sources */,
 				EA12F02C277DF4D1004F23F5 /* ViewController.swift in Sources */,
 				EA12F028277DF4D1004F23F5 /* AppDelegate.swift in Sources */,

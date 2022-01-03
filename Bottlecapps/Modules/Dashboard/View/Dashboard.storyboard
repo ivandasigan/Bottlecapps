@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -12,7 +12,6 @@
         <!--Dashboard View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Y6W-OH-hqX" customClass="DashboardViewController" customModule="Bottlecapps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -58,6 +57,7 @@
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="49.553571428571423"/>
         </scene>
@@ -69,14 +69,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BJG-hi-EKe">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alal" translatesAutoresizingMaskIntoConstraints="NO" id="BJG-hi-EKe">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="DZD-fh-yrh">
+                                <rect key="frame" x="26" y="258" width="92.5" height="49.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Black Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIb-0z-Bus">
+                                        <rect key="frame" x="0.0" y="0.0" width="92.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mixer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INy-Il-erR">
+                                        <rect key="frame" x="0.0" y="29" width="37.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="WxF-vg-xZI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BJG-hi-EKe" firstAttribute="leading" secondItem="LlK-QY-82y" secondAttribute="leading" id="LbZ-aO-iTq"/>
+                            <constraint firstItem="DZD-fh-yrh" firstAttribute="bottom" secondItem="BJG-hi-EKe" secondAttribute="bottom" constant="-12.5" id="NMQ-PH-BB6"/>
                             <constraint firstAttribute="trailing" secondItem="BJG-hi-EKe" secondAttribute="trailing" id="ZCd-Ns-G9d"/>
+                            <constraint firstItem="DZD-fh-yrh" firstAttribute="leading" secondItem="BJG-hi-EKe" secondAttribute="leading" constant="26" id="d9Y-yx-bSb"/>
                             <constraint firstItem="BJG-hi-EKe" firstAttribute="top" secondItem="LlK-QY-82y" secondAttribute="top" id="j6S-xB-DNj"/>
                             <constraint firstAttribute="bottom" secondItem="BJG-hi-EKe" secondAttribute="bottom" id="mxn-zF-9dL"/>
                         </constraints>
@@ -86,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="922" y="-144"/>
         </scene>
-        <!--View Controller-->
+        <!--Brand View Controller-->
         <scene sceneID="gdP-xd-DqV">
             <objects>
-                <viewController id="QlA-Bq-pX5" sceneMemberID="viewController">
+                <viewController id="QlA-Bq-pX5" customClass="BrandViewController" customModule="Bottlecapps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ePL-RU-xQy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,34 +117,43 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zds-iH-Zl7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uU8-WN-YdZ">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uU8-WN-YdZ">
                                     <size key="itemSize" width="167" height="65"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hmP-EG-bYr">
-                                        <rect key="frame" x="0.0" y="0.0" width="167" height="65"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="brand_cell" id="hmP-EG-bYr" customClass="BrandCollectionViewCell" customModule="Bottlecapps" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="b2M-ld-yWZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="167" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJa-On-gV6">
-                                                    <rect key="frame" x="62" y="22" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJa-On-gV6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="DJa-On-gV6" secondAttribute="bottom" id="QHn-AO-9s1"/>
+                                                <constraint firstItem="DJa-On-gV6" firstAttribute="top" secondItem="b2M-ld-yWZ" secondAttribute="top" id="dXl-v3-KBx"/>
+                                                <constraint firstAttribute="trailing" secondItem="DJa-On-gV6" secondAttribute="trailing" id="n8l-mM-yCj"/>
+                                                <constraint firstItem="DJa-On-gV6" firstAttribute="leading" secondItem="b2M-ld-yWZ" secondAttribute="leading" id="w0Y-Bq-Oyz"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="167" height="65"/>
+                                        <size key="customSize" width="120" height="50"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="DJa-On-gV6" id="bFG-wj-our"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="fzI-ig-C38"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Zds-iH-Zl7" firstAttribute="leading" secondItem="ePL-RU-xQy" secondAttribute="leading" id="03n-Mm-iXI"/>
@@ -133,15 +162,18 @@
                             <constraint firstAttribute="trailing" secondItem="Zds-iH-Zl7" secondAttribute="trailing" id="TXS-rR-SVG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="brandCollectionView" destination="Zds-iH-Zl7" id="yOy-rS-GIX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1T-qM-Jt7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="921.73913043478262" y="49.553571428571423"/>
         </scene>
-        <!--View Controller-->
+        <!--Beers View Controller-->
         <scene sceneID="9ov-Qs-Tzs">
             <objects>
-                <viewController id="Qsp-jF-mvX" sceneMemberID="viewController">
+                <viewController id="Qsp-jF-mvX" customClass="BeersViewController" customModule="Bottlecapps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UHY-I8-ZkE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,29 +188,55 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Nfh-9g-khZ">
-                                        <rect key="frame" x="100.5" y="0.0" width="213" height="215"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Nfh-9g-khZ" customClass="BeerCollectionViewCell" customModule="Bottlecapps" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BRO-Iw-h0W">
-                                            <rect key="frame" x="0.0" y="0.0" width="213" height="215"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XgN-Ga-TE5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="213" height="215"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="151"/>
                                                 </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Uwf-8h-4Rj">
+                                                    <rect key="frame" x="8" y="155" width="134" height="37"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Black Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owZ-ka-lkO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="71" height="19.5"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OL-Rn-8ZR">
+                                                            <rect key="frame" x="0.0" y="20.5" width="30.5" height="16.5"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Uwf-8h-4Rj" firstAttribute="top" secondItem="XgN-Ga-TE5" secondAttribute="bottom" constant="4" id="D13-ya-04n"/>
                                                 <constraint firstItem="XgN-Ga-TE5" firstAttribute="top" secondItem="BRO-Iw-h0W" secondAttribute="top" id="D8g-Rq-ESZ"/>
-                                                <constraint firstAttribute="bottom" secondItem="XgN-Ga-TE5" secondAttribute="bottom" id="hZw-Jk-Vuc"/>
+                                                <constraint firstItem="Uwf-8h-4Rj" firstAttribute="leading" secondItem="BRO-Iw-h0W" secondAttribute="leading" constant="8" id="Fty-Wj-Gma"/>
+                                                <constraint firstAttribute="bottom" secondItem="Uwf-8h-4Rj" secondAttribute="bottom" constant="8" id="ND0-ND-Yks"/>
                                                 <constraint firstItem="XgN-Ga-TE5" firstAttribute="leading" secondItem="BRO-Iw-h0W" secondAttribute="leading" id="ic7-3W-vUJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="XgN-Ga-TE5" secondAttribute="trailing" id="oue-V9-XzW"/>
+                                                <constraint firstAttribute="trailing" secondItem="Uwf-8h-4Rj" secondAttribute="trailing" constant="8" id="qIp-Wo-i0w"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="213" height="215"/>
+                                        <size key="customSize" width="150" height="200"/>
+                                        <connections>
+                                            <outlet property="beerImage" destination="XgN-Ga-TE5" id="Q3t-B0-BOd"/>
+                                            <outlet property="srpLabel" destination="1OL-Rn-8ZR" id="LPZ-16-AYe"/>
+                                            <outlet property="titleLabel" destination="owZ-ka-lkO" id="Thh-45-YYf"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="b3Z-UY-Elq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YrC-8b-V9t" firstAttribute="leading" secondItem="UHY-I8-ZkE" secondAttribute="leading" id="19x-so-Ntv"/>
@@ -187,6 +245,9 @@
                             <constraint firstItem="YrC-8b-V9t" firstAttribute="top" secondItem="UHY-I8-ZkE" secondAttribute="top" id="Wd4-gH-Xjx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="beersCollectionView" destination="YrC-8b-V9t" id="aBn-Uv-77q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AIf-YD-92D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,6 +255,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="alal" width="500" height="500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
