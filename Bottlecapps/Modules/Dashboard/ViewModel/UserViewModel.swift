@@ -30,7 +30,7 @@ class UserViewModel: NSObject {
             case .success(let user):
                 self.userData = user
             case .failure(let error):
-                print(error.localizedDescription)
+                print("ERROR VM \(error.localizedDescription)")
             }
         }
     }

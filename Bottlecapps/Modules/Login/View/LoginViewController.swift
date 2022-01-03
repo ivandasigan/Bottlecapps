@@ -21,6 +21,8 @@ class LoginViewController: UIViewController {
             logoImageView.clipsToBounds = true
         }
     }
+ 
+    
     
     //MARK: - INITIALIZATIONS
     var appLoader: AppLoader!
@@ -33,36 +35,38 @@ class LoginViewController: UIViewController {
         
         appLoader = AppLoader(superView: self.view)
         self.view.backgroundColor = AppColor.landingPageColor
-        addButtonActionAndConfiguration()
+        addButtonActionAndConfigurations()
         configureTextFields()
         
+        userViewModel.registerNewUser(user: User(status: 0, payload: Payload(username: "Ivan", password: "pass123"), token: "", message: ""))
+        updaetUI()
     }
     
-    
-    private func updateUI() {
-        userViewModel.bindVMToVC = {
-            // Update data source
-            print(self.userViewModel.userData)
+    func updaetUI() {
+        userViewModel.bindVMToVC =  {
+            print("USER \(self.userViewModel.userData)")
         }
     }
-    
-    private func addButtonActionAndConfiguration() {
+    private func addButtonActionAndConfigurations() {
+        
+
+        loginButton.tintColor = AppColor.landingPageColor
+        createAccountButton.tintColor = .white
+        
         loginButton.addTarget(self, action: #selector(self.loginAction), for: .touchUpInside)
         createAccountButton.addTarget(self, action: #selector(self.createAccountAction), for: .touchUpInside)
+
+        loginButton.backgroundColor = .white
+        loginButton.layer.cornerRadius = 4
     }
     
     private func configureTextFields() {
         usernameTextField.borderStyle = .none
         passwordTextField.borderStyle = .none
-        
-        // Add Underline to each textfields
-        let yAxis = usernameTextField.frame.size.height - 1
-        let width = usernameTextField.frame.size.width
-        let v = UIView()
-        v.backgroundColor = AppColor.underlineColor
-        v.frame = CGRect(x: 0, y: yAxis, width: width, height: 0.5)
-        self.usernameTextField.addSubview(v)
-        self.passwordTextField.addSubview(v)
+        usernameTextField.textColor = .white
+        passwordTextField.textColor = .white
+        usernameTextField.addUnderline()
+        passwordTextField.addUnderline()
     }
     
     //MARK: - OBJC ACTION BUTTON

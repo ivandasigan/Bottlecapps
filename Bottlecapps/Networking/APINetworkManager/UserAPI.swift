@@ -31,7 +31,7 @@ extension UserAPI : EndPointType {
     var task: HTTPTask {
         switch self {
         case .login(let user), .register(let user):
-            return .requestWithParameters(bodyParameter: ["username":user.username, "password":user.password], bodyEncoding: .jsonEncoding, urlParameter: [:])
+            return .requestWithParametersAndHeader(bodyParameter: ["username":user.payload.username, "password":user.payload.password], bodyEncoding: .jsonEncoding, urlParameters: nil, additionalHeaders: ["Content-Type":"application/json"])
         }
     }
     
@@ -56,9 +56,11 @@ struct UserNetworkManager {
     }
     
     func request(user: User, completion: @escaping(Result<User, Error>) -> ()) {
-        userRouter.request(.register(user: user)) { data, response, error in
+        userRouter.request(.login(user: user)) { data, response, error in
             do {
+               
                 guard let mdata = data else { return }
+        
                 let decodedUser = try JSONDecoder().decode(User.self, from: mdata)
                 completion(.success(decodedUser))
                 
