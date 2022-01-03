@@ -55,16 +55,26 @@ struct UserNetworkManager {
         self.userRouter = Router<UserAPI>()
     }
     
-    func request(user: User, completion: @escaping(Result<User, Error>) -> ()) {
+    func loginRequest(user: User, completion: @escaping(Result<User, Error>) -> ()) {
         userRouter.request(.login(user: user)) { data, response, error in
             do {
-               
                 guard let mdata = data else { return }
-        
                 let decodedUser = try JSONDecoder().decode(User.self, from: mdata)
                 completion(.success(decodedUser))
                 
             } catch let error as NSError {
+                completion(.failure(error))
+                print(error.localizedDescription)
+            }
+        }
+    }
+    func registerRequest(user: User, completion: @escaping(Result<User,Error>) -> ()) {
+        userRouter.request(.register(user: user)) { data, response, error in
+            do {
+                guard let mdata = data else { return }
+                let decodedUser = try JSONDecoder().decode(User.self, from: mdata)
+                completion(.success(decodedUser))
+            } catch {
                 completion(.failure(error))
                 print(error.localizedDescription)
             }

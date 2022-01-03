@@ -71,7 +71,9 @@ class LoginViewController: UIViewController {
     
     //MARK: - OBJC ACTION BUTTON
     @objc func loginAction() {
+        let viewController = Modules.Register.initialViewController
         
+        present(viewController, animated: true, completion: nil)
     }
     @objc func createAccountAction() {
         

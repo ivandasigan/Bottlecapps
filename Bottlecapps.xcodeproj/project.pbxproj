@@ -33,6 +33,7 @@
 		EAE90F18277E026D00B0A329 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F17277E026D00B0A329 /* HTTPMethod.swift */; };
 		EAE90F1A277E03C500B0A329 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE90F19277E03C500B0A329 /* ParameterEncoder.swift */; };
 		EAFC122A2782BECC00623667 /* UITextField+UnderlineLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC12292782BECB00623667 /* UITextField+UnderlineLayer.swift */; };
+		EAFC122D2782D51400623667 /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC122C2782D51400623667 /* Modules.swift */; };
 		EAFDAD0A278098D900CF80A2 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDAD09278098D900CF80A2 /* Brand.swift */; };
 		EAFDAD1027809A6900CF80A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDAD0F27809A6900CF80A2 /* LoginViewController.swift */; };
 		EAFDAD1227809A8A00CF80A2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDAD1127809A8A00CF80A2 /* RegisterViewController.swift */; };
@@ -91,6 +92,7 @@
 		EAE90F17277E026D00B0A329 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		EAE90F19277E03C500B0A329 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		EAFC12292782BECB00623667 /* UITextField+UnderlineLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+UnderlineLayer.swift"; sourceTree = "<group>"; };
+		EAFC122C2782D51400623667 /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
 		EAFDAD09278098D900CF80A2 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		EAFDAD0F27809A6900CF80A2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EAFDAD1127809A8A00CF80A2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		EA12F026277DF4D1004F23F5 /* Bottlecapps */ = {
 			isa = PBXGroup;
 			children = (
+				EAFC122B2782D50800623667 /* Enums */,
 				EA7035742781B13500739F29 /* Extensions */,
 				EA7035712781B0B700739F29 /* BaseFiles */,
 				EAE90F0F277DFA4200B0A329 /* Networking */,
@@ -259,6 +262,14 @@
 				EA646432277EED7200351CEE /* JSONParameterEncoder.swift */,
 			);
 			path = Encoding;
+			sourceTree = "<group>";
+		};
+		EAFC122B2782D50800623667 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC122C2782D51400623667 /* Modules.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		EAFDAD0B27809A2300CF80A2 /* App Delegates */ = {
@@ -481,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAFDAD1027809A6900CF80A2 /* LoginViewController.swift in Sources */,
+				EAFC122D2782D51400623667 /* Modules.swift in Sources */,
 				EA646431277EE44F00351CEE /* URLParameterEncoder.swift in Sources */,
 				EAE90F1A277E03C500B0A329 /* ParameterEncoder.swift in Sources */,
 				EA70357C2781D15A00739F29 /* UserAPI.swift in Sources */,

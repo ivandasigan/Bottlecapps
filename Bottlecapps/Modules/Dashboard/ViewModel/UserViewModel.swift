@@ -24,13 +24,24 @@ class UserViewModel: NSObject {
         
     }
     
-    func registerNewUser(user: User) {
-        userNetworkManager.request(user: user) { result in
+    func loginUser(user: User) {
+        userNetworkManager.loginRequest(user: user) { result in
             switch result {
             case .success(let user):
                 self.userData = user
             case .failure(let error):
-                print("ERROR VM \(error.localizedDescription)")
+                print("VM ERR \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func registerNewUser(user: User) {
+        userNetworkManager.registerRequest(user: user) { result in
+            switch result {
+            case .success(let user):
+                self.userData = user
+            case .failure(let error):
+                print("VM ERR \(error.localizedDescription)")
             }
         }
     }
